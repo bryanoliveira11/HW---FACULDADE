@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 6</title>
+    <link rel="stylesheet" href="ex6.css">
+</head>
+
+<body>
+    <header>
+        <h3> Verificador de Triângulo</h3>
+    </header>
+    <form>
+        <p>Digite os 3 Lados : <input type="number" id='lado' name='input' placeholder="1" /> cm </p>
+        <p> <input type="button" name='input' value="Adicionar" onclick='adicionar_lados()' />
+            <input type='button' name='input' value='Lados' onclick="mostrar_lados()" /> </p>
+        <p> <input type='button' name='input' value='Verificar' onclick="verificar()" />
+            <input type='button' name='input' value='Reset' onclick="Reset()" /> </p>
+        <hr />
+        <div>
+            <p id='resultado'></p>
+        </div>
+    </form>
+
+    <script>
+        let lado = document.getElementById('lado')
+        let lados_lista = []
+        let res = document.getElementById('resultado')
+        lado.focus(lado)
+
+        function zerar_caixa() {
+            lado.value = []
+            lado.focus(lado)
+            res.innerHTML = ''
+        }
+
+        function adicionar_lados() {
+            if (lado.value.length == 0) {
+                alert('Digite um Lado Válido !')
+            }
+            else if (lados_lista.length == 3) {
+                alert(`Limite de Lados Atingido! Use o Botão 'VERIFICAR' `)
+                lado.value = []
+            } else {
+                lados_lista.push(lado.value)
+                alert(`Lado de ${lado.value} cm Adicionado !`)
+                zerar_caixa()
+            }
+        }
+
+        function mostrar_lados() {
+            if (lados_lista.length == 0) {
+                alert('Adicione os Lados !')
+            } else {
+                res.innerHTML = `Lados : ${lados_lista} cm`
+            }
+        }
+
+        function verificar() {
+            let soma_1_2 = Number(lados_lista[0]) + Number(lados_lista[1])
+            let soma_2_3 = Number(lados_lista[1]) + Number(lados_lista[2])
+            let soma_1_3 = Number(lados_lista[0]) + Number(lados_lista[2])
+
+            // a soma de 2 lados tem que ser maior que o lado restante.
+            if (lados_lista.length != 3) {
+                res.innerHTML = `Nada Aqui ! Adicione os Lados.`
+            } else if (soma_1_2 > lados_lista[2] && soma_2_3 > lados_lista[0] && soma_1_3 > lados_lista[1]) {
+                res.innerHTML = `<strong> É um Triângulo ! </strong>`
+                res.style.color = 'green'
+            } else {
+                res.innerHTML = `<strong> Não é um Triângulo. </strong>`
+                res.style.color = 'red'
+            }
+        }
+
+        function Reset(){
+            lados_lista.length = 0
+            res.innerHTML = ''
+            zerar_caixa()
+        }
+        
+    </script>
+</body>
+
+</html>
