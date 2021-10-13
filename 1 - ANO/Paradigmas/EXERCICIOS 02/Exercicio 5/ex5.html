@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 5</title>
+    <link rel="stylesheet" href="ex5.css">
+</head>
+
+<body>
+    <form>
+        <h3> Digite Seu Salário Atual :</h3>
+        <p> <input type="number" id='salario' name='input' placeholder="950" /> R$ </p>
+        <p> <input type="button" value="Verificar" onclick="salario_aumento()"/></p> <hr/>
+        <div>
+        <p id='resultado'></p>
+        </div>
+    </form>
+
+
+<script>
+
+function salario_aumento() {
+    let salario = document.getElementById('salario').value
+    let resultado = document.getElementById('resultado')
+
+    if(salario.length == 0){
+        alert("Digite Seu Salário !!")
+    }else if(salario > 950) {
+        salario = salario * 1.04
+        resultado.innerHTML = `Aumento de 4%. <br/> <br/>Seu Salário é : ${salario.toFixed(2)} R$`
+    }else {
+        salario = salario * 1.08
+        resultado.innerHTML = `Aumento de 8%. <br/> <br/>Seu Salário é : ${salario.toFixed(2)} R$`
+    }
+}
+
+</script>
+</body>
+
+</html>
