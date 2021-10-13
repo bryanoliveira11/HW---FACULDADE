@@ -1,0 +1,38 @@
+body {
+    background-color: gray;
+}
+
+form {
+    background-color: rgba(8, 8, 8, 0.568);
+    color: white;
+    font-size: large;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 19%;
+    height: 30%;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+form input[type=number] {
+    outline: 0;
+    border-radius: 12px;
+    width: 80%;
+    height: 25px;
+}
+
+form input[type=button]{
+    width: 45%;
+    height: fit-content;
+    outline: 0;
+    font-size: medium;
+    border-radius: 5px;
+    cursor: pointer;}
+
+#resultado {
+    font-size: larger;
+}
