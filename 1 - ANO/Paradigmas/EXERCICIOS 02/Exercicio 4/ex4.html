@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 4</title>
+    <link rel="stylesheet" href="ex4.css">
+</head>
+
+<body>
+    <form>
+        <h3> Digite Um Número :</h3>
+        <p> <input type="number" id='num' name='input' placeholder="16" /> </p>
+        <p> <input type="button" value="Verificar" onclick="numeros()"/></p> <hr/>
+        <div>
+        <p id='resultado'></p>
+        </div>
+    </form>
+
+
+<script>
+
+function numeros() {
+    let num = document.getElementById('num').value
+    let res = document.getElementById('resultado')
+
+    if (num.length == 0 ){
+        alert('Digite Um Número !')
+    }else if (num > 15) {
+        num = num / 2
+        res.innerHTML = `Sua metade é <strong> ${num} </strong> `
+    }else{
+        res.innerHTML = `Nada Acontece !` 
+    }
+}
+   
+</script>
+</body>
+
+</html>
