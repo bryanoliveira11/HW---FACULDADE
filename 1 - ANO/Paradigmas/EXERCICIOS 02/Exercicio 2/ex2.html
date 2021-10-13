@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 2</title>
+    <link rel="stylesheet" href="ex2.css">
+</head>
+
+<body>
+    <form>
+        <h3> Digite Sua Frequência: </h3>
+        <p> <input type="number" id='freq' name='input' placeholder="75%" /> %</p>
+        <p> <input type="button" value="Verificar" onclick="frequencia()"/></p> 
+        <div>
+        <p id='resultado'></p>
+        </div>
+    </form>
+
+
+<script>
+function frequencia() {
+    let freq = document.getElementById('freq').value
+    let res = document.getElementById('resultado')
+
+    if(freq > 100 || freq < 0) {
+        alert(`Digite uma Frequência Válida !!`)
+    }else if(freq >= 75) {
+        res.innerHTML = ` Você foi APROVADO !`
+        res.style.color = 'green'
+    }else {
+        res.innerHTML = `Você foi REPROVADO !`
+        res.style.color = 'red'
+    }
+}
+</script>
+</body>
+
+</html>
