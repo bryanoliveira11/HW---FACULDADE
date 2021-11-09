@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+
+<body background="images/letter-bg.png" style="background-repeat: no-repeat;">
+
+    <center>
+        <font color='black' face='Times' size='5'>
+
+            <h1> Registro de Usuário</h1>
+
+            <i class="fas fa-user"></i> &nbsp; <input type="name" autocomplete="off" placeholder="Seu Nome : " id='username' style="outline: none;"> <br/>
+            <i class="fas fa-lock"></i> &nbsp; <input type="password" id="senha" placeholder="Sua Senha : " style="outline: none;"> <br/> <br/>
+
+            <i class="fas fa-globe-americas"></i> &nbsp; <input type="text" autocomplete="off" id='pais' placeholder="Seu País :" style="outline: none;" /> <br/>
+            <i class="fas fa-flag-usa"></i> &nbsp; <input type="text" autocomplete="off" id='estado' placeholder="Seu Estado :" style="outline: none;" /> <br/>
+            <i class="far fa-building"></i> &nbsp; <input type="text" autocomplete="off" id='cidade' placeholder="Sua Cidade :" style="outline: none; margin-left: 3px;" /> <br/> <br/> <br/>
+
+            <input type="radio" id='masc' name='gen' checked>
+            <label for="masc"> <i class="fas fa-male"></i> &nbsp;  Masculino </label> &nbsp;
+
+            <input type="radio" id='femi' name='gen'>
+            <label for="femi"> <i class="fas fa-female"></i> &nbsp;  Feminino </label> <br/> <br/>
+
+            <img src="images/registro_btn.png" onclick="get_registro()" style="cursor: pointer;"> </a> &nbsp;
+            <br/>
+            <img src='images/register_background.png' width="1400px" height="370px">
+
+        </font>
+    </center>
+
+    <script src="https://kit.fontawesome.com/03bda43025.js " crossorigin="anonymous "></script>
+    <script src="java-script/registrar.js "></script>
+</body>
+
+</html>
