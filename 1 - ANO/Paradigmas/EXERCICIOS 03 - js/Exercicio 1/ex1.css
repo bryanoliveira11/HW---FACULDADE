@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(45, 3, 83);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 5px 6px 10px black;
+    border-radius: 16px;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+form input[type=number] {
+    border-radius: 8px;
+    outline: 0;
+    border: 1px solid darkblue;
+    width: 59%;
+    height: 25px;
+    transition: 1s;
+}
+
+form input[id=btn] {
+    border-radius: 15px;
+    outline: 0;
+    border: 1px solid rgba(46, 0, 105, 0.322);
+    width: 39%;
+    height: 30px;
+    transition: 1s;
+    font-size: large;
+}
+
+form input[type=number]:hover {
+    width: 63%;
+    box-shadow: 3px 3px 5px rebeccapurple;
+}
+
+form input[id=btn]:hover {
+    width: 45%;
+    background-color: blueviolet;
+    color: white;
+    font-size: larger;
+    box-shadow: 3px 3px 5px rebeccapurple;
+    cursor: pointer;
+}
+
+h1 {
+    color: darkblue;
+}
+
+#resultado {
+    font-size: x-large;
+    color: darkmagenta;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
