@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+    <link rel="stylesheet" href="ex4.css">
+</head>
+
+<body>
+    <form>
+        <header>
+            <h1> Exercício 4 - 50 ao 200 com Imagem </h1>
+        </header>
+        <a href="numeros.html"><img src='clique.png' /> </a>
+        </p>
+        <div id='resultado'> </div>
+    </form>
+
+
+    <script>
+        function numeros() {
+            let count = 50
+            let resultado = document.getElementById("resultado")
+
+            while (count <= 200) {
+                resultado.innerHTML += `${count} <br/>`
+                count++
+            }
+        }
+    </script>
+</body>
+
+</html>

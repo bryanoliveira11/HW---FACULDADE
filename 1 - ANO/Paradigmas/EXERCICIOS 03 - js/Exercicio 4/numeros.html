@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50 a 200</title>
+    <link rel="stylesheet" href="ex4.css">
+</head>
+
+<body>
+    <center>
+        <div id='numeros'></div>
+    </center>
+
+    <script>
+        let mostra_numeros = confirm('Mostrar Números?')
+        let numeros = document.getElementById('numeros')
+
+        if (mostra_numeros) {
+            let count = 50
+            while (count <= 200) {
+                numeros.innerHTML += `${count} <br/>`
+                count++
+            }
+        } else {
+            numeros.innerHTML = `Nada Aqui !`
+        }
+    </script>
+</body>
+
+</html>
